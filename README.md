@@ -1,4 +1,4 @@
-# 📃BACON: Balance Contable Online🥓
+# 📃BACON - Balance Contable Online🥓
 
 **Versión:** 0.1
 
