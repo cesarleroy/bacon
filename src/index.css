@@ -1,9 +1,20 @@
 body {
   font-family: system-ui;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
-form {
-  width: 50%;
+#container {
+  width: auto;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+form, #canvas {
+  height: 70%;
   font-family: consolas;
   background-color: #EDF0F4;
   border: 1px solid black;
@@ -12,4 +23,29 @@ form {
   margin: 6px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
+
+form {
+  width: 25%;
+  justify-content: center;
+}
+
+#canvas {
+  width: 70%;
+}
+
+#seleccionar-cuenta {
+  display: flex;
+  justify-content: space-between;
+}
+
+select {
+  width: 46%;
+}
+
+button {
+  width: 40%;
+  margin: 0 auto;
+}
+
