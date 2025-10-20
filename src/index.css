@@ -5,9 +5,9 @@ body {
 form {
   width: 50%;
   font-family: consolas;
-  background-color: antiquewhite;
+  background-color: #EDF0F4;
   border: 1px solid black;
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 12px;
   margin: 6px;
   display: flex;
