@@ -13,6 +13,12 @@ body {
   align-items: flex-end;
 }
 
+header {
+  width: 80%;
+  height: 40%;
+  border: 1px solid black;
+}
+
 form, #canvas {
   height: 70%;
   font-family: consolas;
@@ -48,4 +54,3 @@ button {
   width: 40%;
   margin: 0 auto;
 }
-
