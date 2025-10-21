@@ -8,7 +8,7 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
   <>
-    <Header/>
+    <Header title='BACON'/>
     <Form />
   </>
 )
