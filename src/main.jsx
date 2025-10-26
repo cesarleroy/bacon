@@ -1,14 +1,14 @@
 import { createRoot } from 'react-dom/client'
+import '../src/styles/global.css'
 import './index.css'
-// import App from './App.jsx'
-import { Form } from './components/AccountForm/Form'
-import { Header } from './components/Header/Header'
+import { App } from '../src/components/App'
+import { Navbar } from '../src/components/Navbar'
 
 const root = createRoot(document.getElementById('root'));
 
 root.render(
   <>
-    <Header title='BACON'/>
-    <Form />
+    <Navbar />
+    <App />
   </>
 )

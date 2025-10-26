@@ -1,57 +1,10 @@
+* { 
+  font-family: bahnschrift, sans-serif; 
+} 
+
 body {
-  font-family: system-ui;
   padding: 0;
   margin: 0;
   height: 100%;
 }
 
-#container {
-  width: auto;
-  height: 70vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 3px black dashed;
-}
-
-header {
-  width: 80%;
-  height: 40%;
-  border: 1px solid black;
-}
-
-form, #canvas {
-  height: 70%;
-  font-family: consolas;
-  background-color: #EDF0F4;
-  border: 1px solid black;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-form {
-  width: 25%;
-  justify-content: center;
-}
-
-#canvas {
-  width: 70%;
-}
-
-#seleccionar-cuenta {
-  display: flex;
-  justify-content: space-between;
-}
-
-select {
-  width: 46%;
-}
-
-button {
-  width: 40%;
-  margin: 0 auto;
-}

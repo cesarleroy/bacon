@@ -1,15 +1,15 @@
-export function SelectBox({ id = "", selected = "", options = [], onChange = () => { } }) { 
+export function SelectBox({ id, selected, options = [], onChange}) { 
   return (
     <>
       <select id={id}
         onChange={(e) => onChange(e.target.value)}>
         <option disabled selected>{selected}</option>
-        {options.map((o) => ( 
-          <option key={o}>
-            {o}
+        {options.map((opt) => (
+          <option key={opt}>
+            {opt}
           </option>
         ))}
       </select>
     </>
-  )
+  );
 }
