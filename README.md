@@ -119,10 +119,17 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 ## 6. Ejemplo de uso
 
+Requisitos
+
+- [Node.JS](https://nodejs.org/en/download)
+- npm
+
 ```bash
 # clonar repo
 git clone https://github.com/cesarleroy/bacon.git
 cd bacon
+npm install
+npm run rev
 
 # otros comandos por definir...
 ```
