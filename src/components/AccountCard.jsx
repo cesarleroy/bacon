@@ -1,5 +1,5 @@
 import vite from '../../public/vite.svg'
-import '../styles/card.css'
+//import '../styles/card.css'
 
 export function AccountCard({
   avatar = vite,
