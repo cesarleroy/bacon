@@ -1,4 +1,7 @@
-# 📃BACON - Balance Contable Online🥓
+# [📃BACON - Balance Contable Online🥓](https://bacon-beta.vercel.app/)
+
+[![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)](https://react.dev/)
+[![Vite Badge](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=for-the-badge)](https://vite.dev/)
 
 **Versión:** 0.1
 
