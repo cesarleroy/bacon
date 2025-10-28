@@ -16,7 +16,7 @@ export function PdfPreviewIframe({ file }) {
     return () => URL.revokeObjectURL(objectUrl);
   }, [file]);
 
-  if (!url) return <div style={{ padding: 12, color: "#666" }}>No hay PDF para previsualizar</div>;
+  if (!url) return <div>No hay PDF para previsualizar</div>;
 
   return (
     <iframe

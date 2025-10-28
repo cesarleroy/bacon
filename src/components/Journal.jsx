@@ -93,9 +93,9 @@ export function Journal({ lines = [], header = {}, flatten = true }) {
         <PdfPreviewIframe file={previewBlob || "/rayado-diario.pdf"} />
       </div>
 
-      <div style={{ marginTop: 8 }}>
+      <div id="tarjeta-enviar">
           <AccountCard>
-              <p>Ejemplo de info</p>
+              "Aquí va la información de la cuenta seleccionada"
           </AccountCard>
         <button onClick={() => { if (previewBlob) { const a = document.createElement("a"); a.href = URL.createObjectURL(previewBlob); a.download = "rayado-diario-llenado.pdf"; a.click(); }}}>Descargar PDF</button>
       </div>
