@@ -36,7 +36,7 @@ export function RegisterForm({ onRegister }) {
     if (!cantidad) return alert("Ingresa una cantidad");
 
     const line = {
-      fecha: fecha || new Date().toLocaleDateString('en-CA'),
+      fecha: fecha || new Date().toLocaleDateString('de-DE'),
       concepto: `${tipoSeleccionado} - ${cuentaSeleccionada}`,
       parcial: cantidad,
       debe: cantidad,
@@ -52,10 +52,10 @@ export function RegisterForm({ onRegister }) {
   return (
     <form onSubmit={handleSubmit}>
       <h5>Registrar Cuenta</h5>
-      <FormField label="Seleccionar cuenta">
-        <div id="seleccion" style={{ display: "flex", gap: 8 }}>
+      <FormField label="Seleccionar cuenta (Concepto)">
+        <div id="seleccion" >
           <SelectBox id="tipos" selected="Tipo" options={tipos} onChange={(v) => setTipo(v)} />
-          <SelectBox id="cuentas" selected="Nombre" options={cuentasFiltradas} onChange={(v) => setCuenta(v)} />
+          <SelectBox id="cuentas" selected="Cuenta" options={cuentasFiltradas} onChange={(v) => setCuenta(v)} />
         </div>
       </FormField>
 

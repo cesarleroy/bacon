@@ -17,17 +17,12 @@ export function App() {
   return (
     <>
       <TitleBar>Balance Contable Online</TitleBar>
-      <div id="canvas" style={{ display: "flex", gap: 12 }}>
-        <div style={{ width: 420 }}>
+      <div id="canvas">
+        <div>
           <RegisterForm onRegister={handleRegisterLine} />
-          <div style={{ marginTop: 12 }}>
-            <AccountCard>
-              <p>Ejemplo de info</p>
-            </AccountCard>
-          </div>
         </div>
 
-        <div id="rayado-info" style={{ flex: 1 }}>
+        <div id="rayado-info">
           <Journal lines={lines} header={header} />
         </div>
       </div>

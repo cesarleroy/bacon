@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PDFDocument } from "pdf-lib";
 import { PdfPreviewIframe } from "./PdfPreviewIframe";
+import { AccountCard } from '../components/AccountCard'
 
 export function Journal({ lines = [], header = {}, flatten = true }) {
   const [previewBlob, setPreviewBlob] = useState(null);
@@ -87,14 +88,17 @@ export function Journal({ lines = [], header = {}, flatten = true }) {
   }
 
   return (
-    <div style={{ width: "100%", height: "100%" }}>
-      <div style={{ height: "calc(100% - 40px)", border: "1px solid #ddd" }}>
+    <>
+      <div id="rayado" style={{ height: "calc(100% - 40px)", border: "1px solid #ddd" }}>
         <PdfPreviewIframe file={previewBlob || "/rayado-diario.pdf"} />
       </div>
 
       <div style={{ marginTop: 8 }}>
+          <AccountCard>
+              <p>Ejemplo de info</p>
+          </AccountCard>
         <button onClick={() => { if (previewBlob) { const a = document.createElement("a"); a.href = URL.createObjectURL(previewBlob); a.download = "rayado-diario-llenado.pdf"; a.click(); }}}>Descargar PDF</button>
       </div>
-    </div>
+    </>
   );
 }

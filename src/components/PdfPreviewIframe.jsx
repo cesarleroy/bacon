@@ -22,7 +22,7 @@ export function PdfPreviewIframe({ file }) {
     <iframe
       title="pdf-preview"
       src={url + (typeof file === "string" ? "#toolbar=0&navpanes=0" : "")}
-      style={{ width: "100%", height: "100%", border: "none" }}
+      id="document"
     />
   );
 }
