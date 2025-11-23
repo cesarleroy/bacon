@@ -78,6 +78,7 @@ a.logo img {
 form {
   background-color: var(--complementario);
   border: 1px solid var(--color-secundario);
+  height: 38em;
   border-radius: 8px;
   padding: 40px;
 }
@@ -219,7 +220,6 @@ button[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #cbd5e0;
   gap: 12px;
 }
 
@@ -245,15 +245,15 @@ button[type="submit"]:hover {
 
 /* SVG dentro del icono */
 #seccion-info svg {
-  width: 24px;
-  height: 24px;
+  width: 48px;
+  height: 48px;
   color: #a0aec0;
 }
 
 /* Logo de Bacon dentro del icono */
 #seccion-info img {
-  width: 24px;
-  height: 24px;
+  width: 6em;
+  height: 6em;
 }
 
 /* Contenedor de texto */
