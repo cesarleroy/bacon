@@ -42,13 +42,13 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 * **Información sobre la cuenta**: Nombre de la cuenta, su naturaleza (acreedora o deudora), usos comunes, etc.
 ```JSON
   {
-    "id": hash,
-    "nombre": string,
-    "descripcion": string,
-    "tipo": string,
-    "subtipo": string,
-    "naturaleza": string
-  },
+    "id": "hash",
+    "nombre": "string",
+    "descripcion": "string",
+    "tipo": "string",
+    "subtipo": "string",
+    "naturaleza": "string"
+  }
 ```  
 
 ### 2.4 Reglas de negocio clave
