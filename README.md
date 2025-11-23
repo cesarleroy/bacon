@@ -41,9 +41,14 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 * **Información sobre la cuenta**: Nombre de la cuenta, su naturaleza (acreedora o deudora), usos comunes, etc.
 ```JSON
-{
-    "_comment": "por definir..."
-}
+  {
+    "id": hash,
+    "nombre": string,
+    "descripcion": string,
+    "tipo": string,
+    "subtipo": string,
+    "naturaleza": string
+  },
 ```  
 
 ### 2.4 Reglas de negocio clave
@@ -52,26 +57,18 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 * Validar la existencia y estado activo de la **cuenta contable** antes de usarla en un asiento.  
 * Cálculo de balances por período: sumar saldos por cuenta y agrupar por tipo (ACTIVO, PASIVO, etc.) para generar los estados financieros.
 
-
 ---
 
 ## 3. Requerimientos
 
-### 3.1 Requerimientos de desarrollo (mínimos)
-
-* CPU: 2 cores
-* RAM: 4 GB
-* Disco: 10 GB libre
-* Sistema operativo: Linux / macOS / Windows
-
-### 3.2 Requisitos funcionales
+### 3.1 Funcionales
 
 * Crear asientos de diario con múltiples líneas.
 * Validación automática (saldo debe = haber).
 * Listado y filtrado de asientos por rango de fechas.
 * Generación de Balance General y Estado de Resultados para un periodo.
 
-### 3.3 Requisitos no funcionales
+### 3.2 No funcionales
 
 * Seguridad: autenticación básica (JWT).
 * Consistencia: transacciones para operaciones contables.
@@ -82,59 +79,35 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 ## 4. Software
 
-### 4.1 Frontend
-
-* **React** (TypeScript)
-* Tailwind CSS o Bootstrap para estilos rápidos
+* **React** (JavaScript)
 * Axios / fetch para llamadas API
-* Librería de componentes: Headless UI / Radix
-
-### 4.2 Backend
-
-* **Node.js + Express**
-* Alternativa: **Python + FastAPI**
-* Validaciones: class-validator (TS) o Pydantic (Python)
-
-### 4.3 Base de datos / Infra
-
-* Docker + Docker Compose para facilitar despliegue local
-* CI: GitHub Actions / GitLab CI
-* Despliegue: Render / DigitalOcean / Heroku / Vercel (frontend)
-
-### 4.4 Otras herramientas
-
-* **Swagger / OpenAPI** para documentación de API.
-* **Postman** collection para pruebas manuales.
-* **Cypress / Playwright** para E2E (opcional).
-* **Jest / PyTest** para tests unitarios.
-* **Eslint / Prettier** para calidad de código.
+* Despliegue: Vercel
 
 ---
 
-## 5. API — Endpoints principales
-
-### Información de las cuentas
-* `GET api/accounts-info/{name/id}` - obtener la información de la cuenta para presentarla al usuario.
-* `POST api/accounts-info/{name}` - registrar la información de la cuenta que ingreso el usuario.
-
----
-
-
-## 6. Ejemplo de uso
+## 5. Uso
 
 Requisitos
 
 - [Node.JS](https://nodejs.org/en/download)
 - npm
 
-```bash
-# clonar repo
-git clone https://github.com/cesarleroy/bacon.git
-cd bacon
-npm install
-npm run rev
+Instalación
 
-# otros comandos por definir...
+1. Clonar el repositorio
+```bash
+  git clone https://github.com/cesarleroy/bacon.git
+```
+
+2. Navegar a la carpeta e instalar dependencias
+```bash
+  cd bacon
+  npm install
+```
+
+3. Correr el proyecto
+```bash
+  npm run rev
 ```
 
 ---
