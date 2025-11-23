@@ -89,8 +89,8 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 ### Requisitos
 
-- [Node.js](https://nodejs.org/en/download)
 - [npm](https://www.npmjs.com/)
+- [Node.js](https://nodejs.org/en/download)
 
 ### Instalación
 
