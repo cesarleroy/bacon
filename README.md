@@ -87,12 +87,12 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 ## 5. Uso
 
-Requisitos
+### Requisitos
 
 - [Node.js](https://nodejs.org/en/download)
 - [npm](https://www.npmjs.com/)
 
-Instalación
+### Instalación
 
 1. Clonar el repositorio
 ```bash
