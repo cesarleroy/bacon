@@ -3,7 +3,7 @@ import { PDFDocument } from "pdf-lib";
 import { PdfPreviewIframe } from "./PdfPreviewIframe";
 import { AccountCard } from '../components/AccountCard'
 
-export function Journal({ lines = [], header = {}, flatten = true }) {
+export function Journal({ lines = [], header = {}, flatten = true, cuentaSeleccionada = null }) {
   const [previewBlob, setPreviewBlob] = useState(null);
   const templateRef = useRef(null);
   const lastUrlRef = useRef(null);
@@ -94,9 +94,29 @@ export function Journal({ lines = [], header = {}, flatten = true }) {
       </div>
 
       <div id="tarjeta-enviar">
-          <AccountCard>
-              "Aquí va la información de la cuenta seleccionada"
-          </AccountCard>
+
+    <AccountCard
+      name={
+        cuentaSeleccionada
+          ? cuentaSeleccionada.nombre
+          : "Selecciona una cuenta"
+      }
+      role={
+        cuentaSeleccionada
+          ? `${cuentaSeleccionada.tipo} · ${cuentaSeleccionada.subtipo}`
+          : "Información de la cuenta"
+      }
+    >
+      {cuentaSeleccionada ? (
+        <div>
+          <p><strong>Descripción:</strong> {cuentaSeleccionada.descripcion}</p>
+          <p><strong>Naturaleza:</strong> {cuentaSeleccionada.naturaleza}</p>
+        </div>
+      ) : (
+        <p>Selecciona una cuenta para ver su información aquí.</p>
+      )}
+    </AccountCard>
+
         <button onClick={() => { if (previewBlob) { const a = document.createElement("a"); a.href = URL.createObjectURL(previewBlob); a.download = "rayado-diario-llenado.pdf"; a.click(); }}}>Descargar PDF</button>
       </div>
     </>

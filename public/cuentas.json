@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "nombre": "Caja",
+    "descripcion": "Efectivo disponible para uso inmediato.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 2,
+    "nombre": "Bancos",
+    "descripcion": "Dinero depositado en cuentas bancarias con disponibilidad inmediata.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 3,
+    "nombre": "Fondos rotatorios",
+    "descripcion": "Cantidades fijas asignadas para gastos menores.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 4,
+    "nombre": "Inversiones temporales",
+    "descripcion": "Inversiones de corto plazo que pueden convertirse rápidamente en efectivo.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 5,
+    "nombre": "Títulos y valores",
+    "descripcion": "Documentos negociables que pueden convertirse en efectivo en el corto plazo.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 6,
+    "nombre": "Clientes",
+    "descripcion": "Personas o empresas que deben dinero por ventas realizadas a crédito.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 7,
+    "nombre": "Documentos por cobrar",
+    "descripcion": "Títulos formales a favor de la empresa con fecha de cobro establecida.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 8,
+    "nombre": "Gastos pagados por adelantado",
+    "descripcion": "Pagos efectuados por servicios que se recibirán posteriormente.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 9,
+    "nombre": "Inventario",
+    "descripcion": "Mercancías disponibles para la venta.",
+    "tipo": "Activo",
+    "subtipo": "Corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 10,
+    "nombre": "Mobiliario y equipo",
+    "descripcion": "Muebles, escritorios y equipo utilizado en las operaciones administrativas.",
+    "tipo": "Activo",
+    "subtipo": "No corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 11,
+    "nombre": "Equipo de cómputo",
+    "descripcion": "Computadoras, servidores y dispositivos electrónicos utilizados en la empresa.",
+    "tipo": "Activo",
+    "subtipo": "No corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 12,
+    "nombre": "Terrenos",
+    "descripcion": "Superficies propiedad de la empresa destinadas a actividades operativas o inversión.",
+    "tipo": "Activo",
+    "subtipo": "No corriente",
+    "naturaleza": "Deudora"
+  },
+  {
+    "id": 13,
+    "nombre": "Proveedores",
+    "descripcion": "Obligaciones por compras de mercancías a crédito.",
+    "tipo": "Pasivo",
+    "subtipo": "Corriente",
+    "naturaleza": "Acreedora"
+  },
+  {
+    "id": 14,
+    "nombre": "Acreedores",
+    "descripcion": "Deudas con terceros por conceptos distintos a mercancías.",
+    "tipo": "Pasivo",
+    "subtipo": "Corriente",
+    "naturaleza": "Acreedora"
+  },
+  {
+    "id": 15,
+    "nombre": "Documentos por pagar",
+    "descripcion": "Obligaciones formales respaldadas por documentos a corto plazo.",
+    "tipo": "Pasivo",
+    "subtipo": "Corriente",
+    "naturaleza": "Acreedora"
+  },
+  {
+    "id": 16,
+    "nombre": "Capital social",
+    "descripcion": "Aportaciones iniciales y adicionales de los socios o propietarios.",
+    "tipo": "Capital",
+    "subtipo": "Patrimonio",
+    "naturaleza": "Acreedora"
+  },
+  {
+    "id": 17,
+    "nombre": "Resultados anteriores",
+    "descripcion": "Ganancias o pérdidas acumuladas de ejercicios previos.",
+    "tipo": "Capital",
+    "subtipo": "Patrimonio",
+    "naturaleza": "Acreedora"
+  }
+]

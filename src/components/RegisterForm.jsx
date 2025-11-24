@@ -8,7 +8,7 @@ const activos =  ["Bancos", "Clientes", "Inventario", "Docs por cobrar",
 const pasivos = ["Docs por pagar", "Acreedores", "Proveedores"]
 const capital = ["Capital social", "Resultados anteriores"]
 
-export function RegisterForm({ onRegister }) {
+export function RegisterForm({ onRegister, onCuentaChange }) {
   const [tipoSeleccionado, setTipo] = useState("");
   const [cuentaSeleccionada, setCuenta] = useState("");
   const [cantidad, setCantidad] = useState("");
@@ -55,7 +55,16 @@ export function RegisterForm({ onRegister }) {
       <FormField label="Seleccionar cuenta (Concepto)">
         <div id="seleccion" >
           <SelectBox id="tipos" selected="Tipo" options={tipos} onChange={(v) => setTipo(v)} />
-          <SelectBox id="cuentas" selected="Cuenta" options={cuentasFiltradas} onChange={(v) => setCuenta(v)} />
+          <SelectBox
+  id="cuentas"
+  selected="Cuenta"
+  options={cuentasFiltradas}
+  onChange={(v) => {
+    setCuenta(v);
+    if (typeof onCuentaChange === "function") onCuentaChange(v);
+  }}
+/>
+
         </div>
       </FormField>
 
