@@ -9,7 +9,7 @@ export function AccountCard({ children }) {
         </div>
         <div id="datos">
           <h3>Bacon Belfort</h3>
-          <h6>Shark Mentality at BACON</h6>
+          <h6>Shark Mind at BACON</h6>
         </div>
       </div>
       <div id="informacion">
