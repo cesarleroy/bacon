@@ -70,10 +70,43 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 ### 3.2 No funcionales
 
-* Seguridad: autenticación básica (JWT).
 * Consistencia: transacciones para operaciones contables.
 * Rendimiento: generación de reportes razonable para pequeñas/medianas tablas
 * Usabilidad: interfaz clara que muestre totales y desfases en asientos.
+
+
+### 3.3 Historias de Usuario
+
+Perfecto, voy a reescribir las historias de usuario enfocadas en el ámbito estudiantil:
+
+---
+
+## 📚 Historias de Usuario - Balance Contable Online (Ámbito Estudiantil)
+
+### **HU-01: Practicar Asientos Contables para la Clase**
+- **Como** estudiante de contabilidad básica  
+- **Quiero** registrar asientos contables de forma sencilla en un rayado diario digital  
+- **Para** practicar los ejercicios de mi clase sin desperdiciar hojas impresas y poder corregir errores fácilmente
+
+### **HU-02: Aprender sobre Cuentas Contables**
+- **Como** estudiante que apenas está aprendiendo contabilidad  
+- **Quiero** ver información educativa sobre cada cuenta mientras la selecciono  
+- **Para** entender qué significa cada cuenta y cuándo debo usarla sin tener que buscar en mis apuntes
+
+### **HU-03: Verificar que mi Balance Cuadre antes de Entregar**
+- **Como** estudiante haciendo mi tarea de contabilidad  
+- **Quiero** que me avisen si mis totales de Debe y Haber no coinciden  
+- **Para** detectar errores antes de entregar mi tarea y no perder puntos
+
+### **HU-04: Descargar mi Tarea en Formato PDF para Entregar**
+- **Como** estudiante que necesita entregar su tarea  
+- **Quiero** descargar un PDF profesional con todos mis asientos contables  
+- **Para** subirlo a la plataforma escolar o imprimirlo y entregarlo al profesor
+
+### **HU-05: Hacer mi Tarea desde mi Celular o Tablet**
+- **Como** estudiante que no siempre tiene acceso a una computadora  
+- **Quiero** poder usar la aplicación desde mi celular o tablet  
+- **Para** hacer mis tareas de contabilidad en cualquier momento.
 
 ---
 
