@@ -1,19 +1,15 @@
 import baconBelfort from '../../public/bacon-belfort.svg'
-//import '../styles/card.css'
 
-export function AccountCard({
-  avatar = baconBelfort,
-  name = "Bacon Belfort",
-  role = "Shark Mentality at BACON",
-  children }) {
-  
+export function AccountCard({ children }) {
   return (
     <div id="seccion-info">
       <div id="personaje">
-        <img src={avatar} alt={name.toLowerCase} />
+        <div id="avatar-container">
+          <img src={baconBelfort} alt="bacon belfort" />
+        </div>
         <div id="datos">
-          <h3>{name}</h3>
-          <h6>{role}</h6>
+          <h3>Bacon Belfort</h3>
+          <h6>Shark Mentality at BACON</h6>
         </div>
       </div>
       <div id="informacion">

@@ -4,7 +4,7 @@
     "nombre": "Caja",
     "descripcion": "Efectivo disponible para uso inmediato.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -12,7 +12,7 @@
     "nombre": "Bancos",
     "descripcion": "Dinero depositado en cuentas bancarias con disponibilidad inmediata.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -20,7 +20,7 @@
     "nombre": "Fondos rotatorios",
     "descripcion": "Cantidades fijas asignadas para gastos menores.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -28,7 +28,7 @@
     "nombre": "Inversiones temporales",
     "descripcion": "Inversiones de corto plazo que pueden convertirse rápidamente en efectivo.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -36,7 +36,7 @@
     "nombre": "Títulos y valores",
     "descripcion": "Documentos negociables que pueden convertirse en efectivo en el corto plazo.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -44,7 +44,7 @@
     "nombre": "Clientes",
     "descripcion": "Personas o empresas que deben dinero por ventas realizadas a crédito.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -52,7 +52,7 @@
     "nombre": "Documentos por cobrar",
     "descripcion": "Títulos formales a favor de la empresa con fecha de cobro establecida.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -60,7 +60,7 @@
     "nombre": "Gastos pagados por adelantado",
     "descripcion": "Pagos efectuados por servicios que se recibirán posteriormente.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -68,7 +68,7 @@
     "nombre": "Inventario",
     "descripcion": "Mercancías disponibles para la venta.",
     "tipo": "Activo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -76,7 +76,7 @@
     "nombre": "Mobiliario y equipo",
     "descripcion": "Muebles, escritorios y equipo utilizado en las operaciones administrativas.",
     "tipo": "Activo",
-    "subtipo": "No corriente",
+    "subtipo": "No Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -84,7 +84,7 @@
     "nombre": "Equipo de cómputo",
     "descripcion": "Computadoras, servidores y dispositivos electrónicos utilizados en la empresa.",
     "tipo": "Activo",
-    "subtipo": "No corriente",
+    "subtipo": "No Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -92,7 +92,7 @@
     "nombre": "Terrenos",
     "descripcion": "Superficies propiedad de la empresa destinadas a actividades operativas o inversión.",
     "tipo": "Activo",
-    "subtipo": "No corriente",
+    "subtipo": "No Circulante",
     "naturaleza": "Deudora"
   },
   {
@@ -100,7 +100,7 @@
     "nombre": "Proveedores",
     "descripcion": "Obligaciones por compras de mercancías a crédito.",
     "tipo": "Pasivo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Acreedora"
   },
   {
@@ -108,7 +108,7 @@
     "nombre": "Acreedores",
     "descripcion": "Deudas con terceros por conceptos distintos a mercancías.",
     "tipo": "Pasivo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Acreedora"
   },
   {
@@ -116,7 +116,7 @@
     "nombre": "Documentos por pagar",
     "descripcion": "Obligaciones formales respaldadas por documentos a corto plazo.",
     "tipo": "Pasivo",
-    "subtipo": "Corriente",
+    "subtipo": "Circulante",
     "naturaleza": "Acreedora"
   },
   {

@@ -1,8 +1,5 @@
-// App.jsx
-import { TitleBar } from '../components/TitleBar'
 import { RegisterForm } from '../components/RegisterForm'
 import { Journal } from '../components/Journal'
-import { AccountCard } from '../components/AccountCard'
 import { useState, useEffect } from "react";
 
 export function App() {
@@ -40,28 +37,24 @@ export function App() {
   }
 
   return (
-    <>
-      <TitleBar>Balance Contable Online</TitleBar>
-
-      <div id="canvas">
-        <div>
-          <RegisterForm
-            onRegister={handleRegisterLine}
-            onCuentaChange={handleCuentaChange}
-            onUpdateTotal={onUpdateTotal}
-          />
-        </div>
-
-        <div id="rayado-info">
-          <Journal
-            lines={lines}
-            header={header}
-            cuentaSeleccionada={cuentaSeleccionada}
-            totalDebe={totalDebe}
-            totalHaber={totalHaber}
-          />
-        </div>
+    <div id="canvas">
+      <div className="form-column">
+        <RegisterForm
+          onRegister={handleRegisterLine}
+          onCuentaChange={handleCuentaChange}
+          onUpdateTotal={onUpdateTotal}
+        />
       </div>
-    </>
+
+      <div id="rayado-info">
+        <Journal
+          lines={lines}
+          header={header}
+          cuentaSeleccionada={cuentaSeleccionada}
+          totalDebe={totalDebe}
+          totalHaber={totalHaber}
+        />
+      </div>
+    </div>
   );
 }

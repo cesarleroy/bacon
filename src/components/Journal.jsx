@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { PDFDocument } from "pdf-lib";
 import { PdfPreviewIframe } from "./PdfPreviewIframe";
-import { AccountCard } from '../components/AccountCard'
+import { AccountCard } from '../components/AccountCard';
+import { TotalesDisplay } from '../components/TotalesDisplay';
 
 export function Journal({ lines = [], header = {}, flatten = true, cuentaSeleccionada = null, totalDebe = 0, totalHaber = 0 }) {
   const [previewBlob, setPreviewBlob] = useState(null);
@@ -25,14 +26,14 @@ export function Journal({ lines = [], header = {}, flatten = true, cuentaSelecci
   useEffect(() => {
     const t = setTimeout(() => regenPreview(lines), 150);
     return () => clearTimeout(t);
-  }, [lines, header, flatten, totalDebe, totalHaber]); // ⭐ Agregado totalDebe y totalHaber
+  }, [lines, header, flatten, totalDebe, totalHaber]);
 
   async function regenPreview(currentLines) {
     if (!templateRef.current) return;
     try {
       const bytes = await fillTemplateWithForm(
         templateRef.current, 
-        { header, lines: currentLines, totalDebe, totalHaber }, // ⭐ Pasando los totales
+        { header, lines: currentLines, totalDebe, totalHaber },
         { flatten }
       );
       const blob = new Blob([bytes], { type: "application/pdf" });
@@ -85,8 +86,7 @@ export function Journal({ lines = [], header = {}, flatten = true, cuentaSelecci
       }
     }
 
-    // ⭐ LLENAR LOS TOTALES
-    // Intenta con diferentes variantes del nombre del campo
+    // Llenar totales
     const totalDebeCandidates = ["total_debe", "totalDebe", "TOTAL_DEBE", "Total_Debe", "total debe", "TotalDebe"];
     const totalHaberCandidates = ["total_haber", "totalHaber", "TOTAL_HABER", "Total_Haber", "total haber", "TotalHaber"];
 
@@ -114,7 +114,7 @@ export function Journal({ lines = [], header = {}, flatten = true, cuentaSelecci
       }
     }
 
-    // 🔍 DEBUGGING: Mostrar todos los campos disponibles (quitar después)
+    // Debugging
     console.log("📋 Campos disponibles en el PDF:", fields.map(f => {
       try { return f.getName(); } catch(e) { return null; }
     }).filter(Boolean));
@@ -127,49 +127,54 @@ export function Journal({ lines = [], header = {}, flatten = true, cuentaSelecci
     return out;
   }
 
+  // Validación: totales deben coincidir
+  const debe = Number(totalDebe) || 0;
+  const haber = Number(totalHaber) || 0;
+  const totalesCoinciden = debe === haber;
+  const puedeDescargar = totalesCoinciden && debe > 0;
+
+  const handleDescargar = () => {
+    if (!puedeDescargar) {
+      alert("No se puede descargar: Los totales de Debe y Haber deben coincidir y ser mayores a 0.");
+      return;
+    }
+    if (previewBlob) { 
+      const a = document.createElement("a"); 
+      a.href = URL.createObjectURL(previewBlob); 
+      a.download = "rayado-diario-llenado.pdf"; 
+      a.click(); 
+    }
+  };
+
   return (
     <>
-      <div id="rayado" style={{ height: "calc(100% - 40px)", border: "1px solid #ddd" }}>
+      <div id="rayado">
         <PdfPreviewIframe file={previewBlob || "/rayado-diario.pdf"} />
       </div>
 
       <div id="tarjeta-enviar">
-        <AccountCard
-          name={
-            cuentaSeleccionada
-              ? cuentaSeleccionada.nombre
-              : "Selecciona una cuenta"
-          }
-          role={
-            cuentaSeleccionada
-              ? `${cuentaSeleccionada.tipo} · ${cuentaSeleccionada.subtipo}`
-              : "Información de la cuenta"
-          }
-        >
+        <AccountCard>
           {cuentaSeleccionada ? (
-            <div>
-              <p><strong>Descripción:</strong> {cuentaSeleccionada.descripcion}</p>
-              <p><strong>Naturaleza:</strong> {cuentaSeleccionada.naturaleza}</p>
-              <p style={{ marginTop: '12px', fontSize: '14px', color: '#718096' }}>
-                <strong>Total Debe:</strong> ${Number(totalDebe).toFixed(2)} | 
-                <strong> Total Haber:</strong> ${Number(totalHaber).toFixed(2)}
-              </p>
-            </div>
+            <p className="info-texto">
+              <strong>{cuentaSeleccionada.nombre}</strong> ({cuentaSeleccionada.tipo} {cuentaSeleccionada.subtipo}): {cuentaSeleccionada.descripcion} Es una cuenta de naturaleza {cuentaSeleccionada.naturaleza.toLowerCase()}.
+            </p>
           ) : (
-            <p>Selecciona una cuenta para ver su información aquí.</p>
+            <p className="info-texto">
+              "Aquí va la información de la cuenta que se está seleccionando."
+            </p>
           )}
         </AccountCard>
 
-        <button onClick={() => { 
-          if (previewBlob) { 
-            const a = document.createElement("a"); 
-            a.href = URL.createObjectURL(previewBlob); 
-            a.download = "rayado-diario-llenado.pdf"; 
-            a.click(); 
-          }
-        }}>
-          Descargar PDF
-        </button>
+        <div id="descarga-section">
+          <TotalesDisplay totalDebe={totalDebe} totalHaber={totalHaber} />
+          <button 
+            onClick={handleDescargar}
+            disabled={!puedeDescargar}
+            className={!puedeDescargar ? 'btn-disabled' : ''}
+          >
+            Descargar PDF
+          </button>
+        </div>
       </div>
     </>
   );

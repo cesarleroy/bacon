@@ -4,9 +4,9 @@ import { SelectBox } from './SelectBox';
 import EntryTypeModal from './EntryTypeModal';
 
 const tipos =  ["Activo", "Pasivo", "Capital"]
-const activos =  ["Bancos", "Clientes", "Inventario", "Docs por cobrar",
+const activos =  ["Caja", "Bancos", "Fondos rotatorios", "Clientes", "Inversiones temporales", "Inventario", "Documentos por cobrar", "Gastos pagados por adelantado",
   "Mobiliario y equipo", "Equipo de cómputo", "Terrenos"]
-const pasivos = ["Docs por pagar", "Acreedores", "Proveedores"]
+const pasivos = ["Documentos por pagar", "Acreedores", "Proveedores"]
 const capital = ["Capital social", "Resultados anteriores"]
 
 export function RegisterForm({ onRegister, onCuentaChange, onUpdateTotal }) {
