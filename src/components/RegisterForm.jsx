@@ -36,9 +36,9 @@ export function RegisterForm({ onRegister, onCuentaChange, onUpdateTotal }) {
 
   const handleSubmit = (e) => {
     e && e.preventDefault && e.preventDefault();
-    if (!tipoSeleccionado) return alert("Selecciona un tipo");
-    if (!cuentaSeleccionada) return alert("Selecciona una cuenta");
-    if (!cantidad) return alert("Ingresa una cantidad");
+    if (!tipoSeleccionado) return alert("Selecciona un Tipo de Cuenta");
+    if (!cuentaSeleccionada) return alert("Selecciona una Cuenta");
+    if (!cantidad) return alert("Ingresa una Cantidad");
 
     // Decide debe/haber según entryType
     const line = {
