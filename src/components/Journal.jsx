@@ -160,7 +160,7 @@ export function Journal({ lines = [], header = {}, flatten = true, cuentaSelecci
             </p>
           ) : (
             <p className="info-texto">
-              "Aquí va la información de la cuenta que se está seleccionando."
+              "No olvides cumplir con la ley de la partida doble: 'A cada cargo le corresponde un haber', 'El total del debe = El total del haber' ".
             </p>
           )}
         </AccountCard>
