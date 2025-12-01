@@ -77,12 +77,6 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 ### 3.3 Historias de Usuario
 
-Perfecto, voy a reescribir las historias de usuario enfocadas en el ámbito estudiantil:
-
----
-
-## 📚 Historias de Usuario - Balance Contable Online (Ámbito Estudiantil)
-
 ### **HU-01: Practicar Asientos Contables para la Clase**
 - **Como** estudiante de contabilidad básica  
 - **Quiero** registrar asientos contables de forma sencilla en un rayado diario digital  
