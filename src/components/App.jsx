@@ -8,35 +8,35 @@ import { useState, useEffect } from "react";
 export function App() {
   const [lines, setLines] = useState([]);
   const [header, setHeader] = useState({ folio: "001", fecha: "" });
+  const [totalDebe, setTotalDebe] = useState(0);
+  const [totalHaber, setTotalHaber] = useState(0);
 
-  // NUEVO: almacenar la cuenta seleccionada en el formulario
   const [cuentaSeleccionada, setCuentaSeleccionada] = useState(null);
-
-  // NUEVO: lista completa de cuentas desde cuentas.json
   const [cuentas, setCuentas] = useState([]);
 
-  // Cargar cuentas.json una sola vez
   useEffect(() => {
-    fetch('/cuentas.json')               // Asegúrate de colocar cuentas.json en /public
+    fetch('/cuentas.json')
       .then(res => res.json())
       .then(data => setCuentas(data))
       .catch(err => console.error("Error al cargar cuentas.json:", err));
   }, []);
 
-  // llamada desde RegisterForm: añade línea al array y Journal se actualizará
   function handleRegisterLine(line) {
     setLines(prev => [...prev, line]);
   }
 
-  // NUEVO: cuando RegisterForm cambie de cuenta, buscarla en el JSON
   function handleCuentaChange(nombreCuenta) {
     if (!nombreCuenta) {
       setCuentaSeleccionada(null);
       return;
     }
-
     const encontrada = cuentas.find(c => c.nombre === nombreCuenta);
     setCuentaSeleccionada(encontrada || null);
+  }
+
+  function onUpdateTotal(debe, haber) {
+    setTotalDebe(prev => prev + Number(debe || 0));
+    setTotalHaber(prev => prev + Number(haber || 0));
   }
 
   return (
@@ -47,7 +47,8 @@ export function App() {
         <div>
           <RegisterForm
             onRegister={handleRegisterLine}
-            onCuentaChange={handleCuentaChange}  
+            onCuentaChange={handleCuentaChange}
+            onUpdateTotal={onUpdateTotal}
           />
         </div>
 
@@ -56,6 +57,8 @@ export function App() {
             lines={lines}
             header={header}
             cuentaSeleccionada={cuentaSeleccionada}
+            totalDebe={totalDebe}
+            totalHaber={totalHaber}
           />
         </div>
       </div>
