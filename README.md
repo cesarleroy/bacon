@@ -12,6 +12,37 @@ Su objetivo es brindar una herramienta simple, educativa y funcional que aplique
 
 ---
 
+## Índice de Contenidos
+
+- [📃BACON - Balance Contable Online🥓](#bacon---balance-contable-online)
+  - [Índice de Contenidos](#índice-de-contenidos)
+  - [1. Idea / Resumen del proyecto](#1-idea--resumen-del-proyecto)
+  - [2. Especificaciones técnicas](#2-especificaciones-técnicas)
+    - [2.1 Arquitectura general](#21-arquitectura-general)
+    - [2.2 Patrones de diseño](#22-patrones-de-diseño)
+    - [2.3 Modelo de datos](#23-modelo-de-datos)
+    - [2.4 Reglas de negocio clave](#24-reglas-de-negocio-clave)
+  - [3. Requerimientos](#3-requerimientos)
+    - [3.1 Funcionales](#31-funcionales)
+    - [3.2 No funcionales](#32-no-funcionales)
+    - [3.3 Historias de Usuario](#33-historias-de-usuario)
+      - [**HU-01: Practicar Asientos Contables**](#hu-01-practicar-asientos-contables)
+      - [**HU-02: Aprender sobre Cuentas Contables**](#hu-02-aprender-sobre-cuentas-contables)
+      - [**HU-03: Verificar que mi Balance Cuadre antes de Entregar**](#hu-03-verificar-que-mi-balance-cuadre-antes-de-entregar)
+      - [**HU-04: Descargar mi Tarea en Formato PDF para Entregar**](#hu-04-descargar-mi-tarea-en-formato-pdf-para-entregar)
+      - [**HU-05: Hacer mi Tarea desde mi Celular o Tablet**](#hu-05-hacer-mi-tarea-desde-mi-celular-o-tablet)
+  - [4. Software](#4-software)
+  - [5. Uso](#5-uso)
+    - [Requisitos](#requisitos)
+    - [Instalación](#instalación)
+  - [6. Anexos](#6-anexos)
+    - [6.1. Diagramas](#61-diagramas)
+    - [6.2. Mockups / Wireframes](#62-mockups--wireframes)
+    - [6.3. Identidad Visual](#63-identidad-visual)
+  - [7. LICENCIA](#7-licencia)
+
+---
+
 ## 1. Idea / Resumen del proyecto
 
 Una herramienta web para llevar la contabilidad básica de un emprendedor, una persona o para prácticar y corroborar nociones básicas de la materia. La cual permite:
@@ -74,7 +105,7 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 ### 3.3 Historias de Usuario
 
-#### **HU-01: Practicar Asientos Contables para la Clase**
+#### **HU-01: Practicar Asientos Contables**
 - **Como** estudiante de contabilidad básica  
 - **Quiero** registrar asientos contables de forma sencilla en un rayado diario digital  
 - **Para** practicar los ejercicios de mi clase sin desperdiciar hojas impresas y poder corregir errores fácilmente
@@ -149,4 +180,17 @@ Basta con ir al [enlace](https://bacon-beta.vercel.app/) y realizar las operacio
 ### 6.2. [Mockups / Wireframes](./anexos/mockups)
 ### 6.3. [Identidad Visual](./anexos/identidad)
 
+---
+
 ## 7. LICENCIA
+
+Este proyecto se distribuye bajo la licencia **MIT**.
+
+Eres libre de:
+* Usar este código para fines educativos o personales.
+* Modificarlo y adaptarlo a tus necesidades.
+* Distribuirlo.
+
+Bajo las siguientes condiciones:
+1. Incluir el aviso de derechos de autor original.
+2. El software se proporciona "tal cual", sin garantía de ningún tipo.
