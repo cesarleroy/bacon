@@ -5,7 +5,7 @@
 
 **Versión:** 0.1
 
-**Descripción:** **BACON** (*Balance Contable Online*) es un sistema web diseñado para registrar y clasificar cuentas, generar asientos de diario y estados financieros básicos.
+**Descripción:** **BACON** (*Balance Contable Online*) es un sistema web diseñado para registrar y clasificar cuentas, generar asientos de diario.
 Su objetivo es brindar una herramienta simple, educativa y funcional que aplique principios de ingeniería de software, patrones de diseño y buenas prácticas de arquitectura.
 
 **Objetivo:** Desarrollar un sistema con diseño modular y escalable que implemente principios de contabilidad básica y permita la evolución hacia un software financiero más completo mediante el uso del diseño en capas y patrones de diseño.
@@ -19,8 +19,7 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 * Tener un **plan de cuentas** (activos, pasivos, patrimonio, ingresos, gastos).
 * Registrar **asientos de diario** (debe y haber).
 * Validar que cada asiento cuadre (suma del debe = suma del haber).
-* Generar **estados financieros** por periodo: Balance General y Estado de Resultados.
-* Exportar reportes (CSV/PDF).
+* Exportar reportes a PDF.
 
 ---
 
@@ -55,7 +54,7 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 
 * No permitir registrar un **asiento contable** si `suma(debe) != suma(haber)` (validación tanto en backend como en frontend).  
 * Validar la existencia y estado activo de la **cuenta contable** antes de usarla en un asiento.  
-* Cálculo de balances por período: sumar saldos por cuenta y agrupar por tipo (ACTIVO, PASIVO, etc.) para generar los estados financieros.
+* Cálculo de balances por período: sumar saldos por cuenta y agrupar por tipo.
 
 ---
 
@@ -66,7 +65,6 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 * Crear asientos de diario con múltiples líneas.
 * Validación automática (saldo debe = haber).
 * Listado y filtrado de asientos por rango de fechas.
-* Generación de Balance General y Estado de Resultados para un periodo.
 
 ### 3.2 No funcionales
 
@@ -74,30 +72,29 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 * Rendimiento: generación de reportes razonable para pequeñas/medianas tablas
 * Usabilidad: interfaz clara que muestre totales y desfases en asientos.
 
-
 ### 3.3 Historias de Usuario
 
-### **HU-01: Practicar Asientos Contables para la Clase**
+#### **HU-01: Practicar Asientos Contables para la Clase**
 - **Como** estudiante de contabilidad básica  
 - **Quiero** registrar asientos contables de forma sencilla en un rayado diario digital  
 - **Para** practicar los ejercicios de mi clase sin desperdiciar hojas impresas y poder corregir errores fácilmente
 
-### **HU-02: Aprender sobre Cuentas Contables**
+#### **HU-02: Aprender sobre Cuentas Contables**
 - **Como** estudiante que apenas está aprendiendo contabilidad  
 - **Quiero** ver información educativa sobre cada cuenta mientras la selecciono  
 - **Para** entender qué significa cada cuenta y cuándo debo usarla sin tener que buscar en mis apuntes
 
-### **HU-03: Verificar que mi Balance Cuadre antes de Entregar**
+#### **HU-03: Verificar que mi Balance Cuadre antes de Entregar**
 - **Como** estudiante haciendo mi tarea de contabilidad  
 - **Quiero** que me avisen si mis totales de Debe y Haber no coinciden  
 - **Para** detectar errores antes de entregar mi tarea y no perder puntos
 
-### **HU-04: Descargar mi Tarea en Formato PDF para Entregar**
+#### **HU-04: Descargar mi Tarea en Formato PDF para Entregar**
 - **Como** estudiante que necesita entregar su tarea  
 - **Quiero** descargar un PDF profesional con todos mis asientos contables  
 - **Para** subirlo a la plataforma escolar o imprimirlo y entregarlo al profesor
 
-### **HU-05: Hacer mi Tarea desde mi Celular o Tablet**
+#### **HU-05: Hacer mi Tarea desde mi Celular o Tablet**
 - **Como** estudiante que no siempre tiene acceso a una computadora  
 - **Quiero** poder usar la aplicación desde mi celular o tablet  
 - **Para** hacer mis tareas de contabilidad en cualquier momento.
@@ -107,15 +104,22 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 ## 4. Software
 
 * **React** (JavaScript)
-* Axios / fetch para llamadas API
-* Despliegue: Vercel
+* fetch para llamadas API
+* Vercel para el despliegue
+* Git para control de versiones
+* GitHub como repositorio del proyecto y para documentación
+* Vite como herramienta para compilar los modulos y preparar todo para el despliegue
+* npm como el manejador de paquetes y dependencias
 
 ---
 
 ## 5. Uso
 
+Basta con ir al [enlace](https://bacon-beta.vercel.app/) y realizar las operaciones deseadas, o bien si se desea clonarlo y ejecutarlo en local, seguir los siguientes pasos...
+
 ### Requisitos
 
+- [Git](https://git-scm.com/install/)
 - [npm](https://www.npmjs.com/)
 - [Node.js](https://nodejs.org/en/download)
 
@@ -138,5 +142,11 @@ Una herramienta web para llevar la contabilidad básica de un emprendedor, una p
 ```
 
 ---
+
+## 6. Anexos
+
+### 6.1. [Diagramas](./anexos/diagramas)
+### 6.2. [Mockups / Wireframes](./anexos/mockups)
+### 6.3. [Identidad Visual](./anexos/identidad)
 
 ## 7. LICENCIA
