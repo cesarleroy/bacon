@@ -10,11 +10,19 @@ Su objetivo es brindar una herramienta simple, educativa y funcional que aplique
 
 **Objetivo:** Desarrollar un sistema con diseño modular y escalable que implemente principios de contabilidad básica y permita la evolución hacia un software financiero más completo mediante el uso del diseño en capas y patrones de diseño.
 
+## Integrantes
+
+- **Carmona González César Leroy**
+- **Cruz Cruz Kevin Eduardo**
+- **Franco Sánchez Ángel Alexis**
+- **Sandoval Jiménez Rodrigo**
+
 ---
 
 ## Índice de Contenidos
 
 - [📃BACON - Balance Contable Online🥓](#bacon---balance-contable-online)
+  - [Integrantes](#integrantes)
   - [Índice de Contenidos](#índice-de-contenidos)
   - [1. Idea / Resumen del proyecto](#1-idea--resumen-del-proyecto)
   - [2. Especificaciones técnicas](#2-especificaciones-técnicas)
