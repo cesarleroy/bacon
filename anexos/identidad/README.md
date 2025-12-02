@@ -55,4 +55,12 @@ Se utiliza un icono SVG distintivo que representa una loncha de tocino en estilo
   * **Rol:** Actúa como guía en la plataforma, presenta información, y humaniza la comunicación de BACON.
   * **Uso:** Se puede utilizar en la página web, en materiales promocionales, en redes sociales y en presentaciones, generalmente dentro de un círculo beige o como personaje independiente.
 
+## 6. Bocetos
+
+![boceto-logo-personaje](logo-personaje.png)
+
+![bocetos](bocetos.png)
+
+## 7. Resultado final
+
 ![identidad](identidad-visual.png)
